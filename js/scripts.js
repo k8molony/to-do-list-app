@@ -27,10 +27,13 @@ function newItem(){
   li.append(crossOutButton);
 
   crossOutButton.on('click', deleteListItem);
-  function deleteListItem(){
-    li.addClass('delete')
+    function deleteListItem(){
+      li.addClass('delete')
   }
 
   //Make list sortable
   $('#list').sortable();
+
+  //clear field after submit
+  $('form').trigger('reset');
 }
